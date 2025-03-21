@@ -1,0 +1,27 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+  }
+  
+  .form-section {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+  
+  input.mat-input-element {
+    height: auto;
+    padding: 8px;
+    box-sizing: border-box;
+  }

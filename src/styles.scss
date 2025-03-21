@@ -1,1 +1,56 @@
+$white-color: #ffffff;
+$black-color: #000000;
+$background-color: rgb(0, 0, 0);
+$text-shadow-color: #000000;
+
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('../public/assets/imgs/milkyWay.jpg');
+}
+
+.h1 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    border-radius: 1px;
+    color: $white-color; 
+    text-shadow: 1px 1px 0px $text-shadow-color; 
+}
+
+.search-label {
+    display: grid;
+    flex-direction: column; 
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    color: $white-color;
+    text-shadow: 1px 1px 0px $text-shadow-color;
+    margin-bottom: 10px;
+}
+
+.search-text-control {
+    display: block;
+    border: 1px solid $black-color;
+    border-radius: 5px;
+    padding: 12px 20px;
+    background-color: $background-color;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: $white-color;
+    margin-top: 10px;
+    text-shadow: 1px 1px 0px $text-shadow-color;
+}
+
+.button-search {
+    border: 1px solid $black-color;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 20px;
+    front-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+    background-color: $background-color;
+    color: $white-color;
+    cursor: pointer;
+}

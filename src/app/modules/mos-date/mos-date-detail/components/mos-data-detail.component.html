@@ -1,0 +1,40 @@
+<form [formGroup]="form" class="form-container">
+  <div class="form-section">
+    <h3>Общие сведения</h3>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Полное наименование</mat-label>
+      <input matInput formControlName="fullName" />
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Руководитель</mat-label>
+      <input matInput formControlName="chiefName" />
+    </mat-form-field>
+  </div>
+  <div class="form-section">
+    <H3>Контакты</H3>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Телефон</mat-label>
+      <textarea
+        matInput
+        formControlName="phone"
+        [attr.rows]="phoneCount"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Часы работы</mat-label>
+      <textarea
+        matInput
+        formControlName="workingHours"
+        [attr.rows]="workingHoursCount"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Адресс</mat-label>
+      <textarea
+        matInput
+        formControlName="address"
+        [attr.rows]="addressCount"
+      ></textarea>
+    </mat-form-field>
+  </div>
+</form>

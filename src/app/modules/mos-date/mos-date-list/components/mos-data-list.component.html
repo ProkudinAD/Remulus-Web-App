@@ -1,0 +1,58 @@
+<form class="mos-data-list" [formGroup]="form">
+  <div class="h1">Выгрузить данные из библиотеки</div>
+  <label class="search-label">
+    <input
+      class="search-text-control"
+      type="text"
+      formControlName="search"
+      placeholder="Введите ключевые слова для поиска"
+    />
+  </label>
+
+  <button class="button-search" type="button" (click)="onGoToSearchClick()">
+    Найти
+  </button>
+</form>
+
+<div class="table-container">
+  <cdk-virtual-scroll-viewport
+    [itemSize]="totalItemSize"
+    class="virtual-scroll"
+    (scrolledIndexChange)="onScroll()"
+  >
+    <div class="table-wrapper">
+      <table mat-table [dataSource]="dataSource" class="mat-table">
+        <ng-container matColumnDef="index">
+          <th mat-header-cell *matHeaderCellDef>#</th>
+          <td mat-cell *matCellDef="let element; let i = index">{{ i + 1 }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="FullName">
+          <th mat-header-cell *matHeaderCellDef>Название</th>
+          <td mat-cell *matCellDef="let element">
+            <span [innerHTML]="element.FullName | highlight: searchQuery"></span>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="address">
+          <th mat-header-cell *matHeaderCellDef>Адрес</th>
+          <td
+            mat-cell
+            *matCellDef="let element"
+            [style.white-space]="'pre-line'"
+          >
+            {{ getAddressString(element.ObjectAddress) }}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: displayedColumns"
+          (click)="onRowClick(row)"
+          class="clickable-row"
+        ></tr>
+      </table>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

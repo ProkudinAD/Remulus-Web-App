@@ -1,0 +1,58 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+.mos-data-list {
+  margin-bottom: 10px;
+}
+
+.table-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%; 
+  max-width: 1700px;
+  height: 70vh;
+  overflow: hidden;
+  margin: 0 auto; 
+}
+
+.virtual-scroll {
+  height: 100%;
+  width: 100%;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.mat-table {
+  min-width: 100%;
+}
+
+.mat-cell,
+.mat-header-cell {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clickable-row:hover {
+  background-color: #d3cece;
+}
+
+.highlight {
+  background-color: red;
+  color: rgb(183, 21, 21);
+}
